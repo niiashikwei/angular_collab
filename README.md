@@ -12,3 +12,8 @@ Guidlines:
 5) Screen hero
 6) Bi-weekly retros for heavier items
 7) Regular feedback for simple items
+
+
+A few tutorials to work on:
+1) Hello world: http://viralpatel.net/blogs/angularjs-introduction-hello-world-tutorial/
+2) 2048 game: http://www.ng-newsletter.com/posts/building-2048-in-angularjs.html
