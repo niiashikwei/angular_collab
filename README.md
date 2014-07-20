@@ -16,5 +16,5 @@ Guidelines:
 
 A few tutorials to work on:
 
-2. Hello world: http://viralpatel.net/blogs/angularjs-introduction-hello-world-tutorial/
-2. 2048 game: http://www.ng-newsletter.com/posts/building-2048-in-angularjs.html
+1. Hello world: http://viralpatel.net/blogs/angularjs-introduction-hello-world-tutorial/
+1. 1048 game: http://www.ng-newsletter.com/posts/building-1048-in-angularjs.html
