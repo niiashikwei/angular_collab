@@ -12,10 +12,15 @@
 
 <div ng-controller="CarController">
     My name is {{ name }} and I am a {{ type }}
+    <input type="button" ng-click="warning()" />
+
     <div ng-controller="BMWController">
         My name is {{ name }} and I am a {{ type }}
+        <input type="button" ng-click="warning()" />
+
         <div ng-controller="BMWMotorcycleController">
             My name is {{ name }} and I am a {{ type }}
+            <input type="button" ng-click="warning()" />
         </div>
     </div>
 </div>
@@ -24,6 +29,9 @@
     function CarController($scope) {
         $scope.name = 'Car';
         $scope.type = 'Carr';
+        $scope.warning = function(){
+            alert("Car-Warning");
+        }
     }
     function BMWController($scope) {
         $scope.name = 'Stella';
@@ -31,6 +39,9 @@
     function BMWMotorcycleController($scope) {
         $scope.name = 'SweetieBaby';
         $scope.type = 'Motorcycle';
+        $scope.warning = function(){
+            alert("BMW-Warning");
+        }
     }
 </script>
 
