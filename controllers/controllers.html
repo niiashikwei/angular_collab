@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
 	<title>Hello World, AngularJS - ViralPatel.net</title>
 	<script type="text/javascript"
@@ -18,13 +18,15 @@
 </div>
 
 <script type="text/javascript">
-	function ContactController($scope){
-		$scope.contacts = ["mor@thoughtworks.com","ntetteh@thoughtworks.com"];
-		$scope.add = function(){
+	var myApp = angular.module("myApp", []);
+
+	myApp.controller("ContactController", ["$scope", function($scope) {
+		$scope.contacts = ["mor@thoughtworks.com", "ntetteh@thoughtworks.com"];
+		$scope.add = function () {
 			$scope.contacts.push($scope.newcontact);
 			$scope.newcontact = "";
 		}
-	}
+	}]);
 </script>
 
 </body>
