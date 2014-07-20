@@ -18,12 +18,15 @@
         My name is {{ name }} and I am a {{ type }}
         <input type="button" ng-click="warning()" />
 
-        <div ng-controller="BMWMotorcycleController">
-            My name is {{ name }} and I am a {{ type }}
-            <input type="button" ng-click="warning()" />
-        </div>
+
     </div>
 </div>
+
+<div ng-controller="BMWMotorcycleController">
+    My name is {{ name }} and I am a {{ type }}
+    <input type="button" ng-click="warning()" />
+</div>
+
 
 <script>
     function CarController($scope) {
@@ -36,8 +39,13 @@
     function BMWController($scope) {
         $scope.name = 'Stella';
     }
-    function BMWMotorcycleController($scope) {
-        $scope.name = 'SweetieBaby';
+    function FooController($scope){
+        $scope.name = "bar";
+    }
+    function BMWMotorcycleController($scope, $injector) {
+        $injector.invoke(CarController, this, {$scope:$scope});
+        $injector.invoke(FooController, this, {$scope:$scope});
+
         $scope.type = 'Motorcycle';
         $scope.warning = function(){
             alert("BMW-Warning");
