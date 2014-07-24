@@ -15,6 +15,10 @@ sampleApp.config(['$routeProvider',
                 templateUrl: 'templates/show_orders.html',
                 controller: 'ShowOrdersController'
             }).
+            when('/ShowOrder/:orderId', {
+                templateUrl: 'templates/show_order.html',
+                controller: 'ShowOrderController'
+            }).
             otherwise({
                 redirectTo: '/AddNewOrder'
             });
@@ -31,5 +35,11 @@ sampleApp.controller('AddOrderController', function($scope) {
 sampleApp.controller('ShowOrdersController', function($scope) {
 
     $scope.message = 'This is Show orders screen';
+
+});
+
+sampleApp.controller('ShowOrderController', function($scope, $routeParams) {
+
+    $scope.order_id = $routeParams.orderId;
 
 });
